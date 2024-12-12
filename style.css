@@ -1,0 +1,46 @@
+/* styles.css */
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    text-align: center;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+input {
+    width: 72%;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #bd8f4b;
+}
