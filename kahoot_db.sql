@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-12-2024 a las 05:46:13
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 16-12-2024 a las 09:15:37
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -68,11 +68,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `tiempIni`, `tiempFin`, `score`) VALUES
-(23, 'rt', '2024-12-16 04:18:39', '2024-12-16 04:18:47', 5),
-(24, 'yy', '2024-12-16 04:19:05', '2024-12-16 04:19:17', 4),
-(25, 'rrr', '2024-12-16 04:19:44', '2024-12-16 04:30:53', 5),
-(26, 'f', '2024-12-16 04:40:53', '2024-12-16 04:41:04', 4),
-(27, 'asdf', '2024-12-16 04:43:53', '2024-12-16 04:44:02', 4);
+(28, 'ds', '2024-12-16 07:45:25', '2024-12-16 07:45:59', 4),
+(29, 'sdf', '2024-12-16 07:50:22', NULL, NULL),
+(30, 'dsdf', '2024-12-16 07:53:24', '2024-12-16 07:53:56', 3);
 
 --
 -- Índices para tablas volcadas
@@ -98,7 +96,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
