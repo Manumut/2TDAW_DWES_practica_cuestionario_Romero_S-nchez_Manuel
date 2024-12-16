@@ -1,46 +1,155 @@
 /* styles.css */
+
+/* Estilos generales */
 body {
-    font-family: Arial;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-div {
+/* --- Página de Registro --- */
+.registro-container {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
     text-align: center;
-    background: black;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
 }
 
-label {
+.registro-container h1 {
+    font-size: 28px;
     margin-bottom: 20px;
-    font-size: 20px;
 }
 
-input {
-    width: 72%;
+.registro-container label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.registro-container input[type="text"] {
+    width: 80%;
     padding: 12px;
     margin-bottom: 20px;
-    margin-top: 10px;
     border: none;
     border-radius: 5px;
 }
 
-button {
+.registro-container input[type="submit"] {
     background: #ff9800;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button:hover {
+.registro-container input[type="submit"]:hover {
     background: #bd8f4b;
+}
+
+/* --- Página de Preguntas --- */
+.preguntas-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.preguntas-container h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.preguntas-container .question {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.preguntas-container .question label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.preguntas-container input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.preguntas-container input[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.preguntas-container input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* --- Página de Resultados --- */
+.resultados-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.resultados-container h1 {
+    margin-bottom: 20px;
+}
+
+.resultados-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.resultados-container th, .resultados-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.resultados-container th {
+    background: #f4f4f9;
+    font-weight: bold;
+}
+
+.resultados-container a.button {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.resultados-container a.button:hover {
+    background: #0056b3;
 }
