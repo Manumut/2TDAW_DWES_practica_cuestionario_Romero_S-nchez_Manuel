@@ -1,6 +1,6 @@
 <?php
-// results.php
-session_start(); // Inicia la sesión
+session_start(); // Inicia la sesion
+
 // Conexión a la base de datos
 $servername = "localhost";
 $username = "root";
@@ -9,15 +9,8 @@ $dbname = "kahoot_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 // Consulta para obtener el ranking de los usuarios
-$query = "SELECT name, TIMESTAMPDIFF(SECOND, tiempIni, tiempFin) AS duration, score
-          FROM users
-          WHERE tiempFin IS NOT NULL
-          ORDER BY duration ASC";
+$query = "SELECT name, TIMESTAMPDIFF(SECOND, tiempIni, tiempFin) AS duration, score FROM users WHERE tiempFin IS NOT NULL ORDER BY duration ASC";
 $result = $conn->query($query);
 
 $ranking = [];
@@ -33,11 +26,11 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="resultados">
-    <div class="container">
+<body>
+    <div class="resultados-container">
         <h1>Ranking de Usuarios</h1>
         <table>
             <thead>
@@ -50,9 +43,9 @@ $conn->close();
             <tbody>
                 <?php foreach ($ranking as $user): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($user['name']); ?></td>
-                        <td><?php echo htmlspecialchars($user['duration']); ?></td>
-                        <td><?php echo htmlspecialchars($user['score']); ?></td>
+                        <td><?php echo ($user['name']); ?></td>
+                        <td><?php echo ($user['duration']); ?></td>
+                        <td><?php echo ($user['score']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

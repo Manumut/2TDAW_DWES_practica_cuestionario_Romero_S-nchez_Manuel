@@ -1,7 +1,6 @@
 <?php
-// check_answer.php
 
-// Inicia la sesión para acceder a los datos del usuario
+// Inicia la sesion
 session_start();
 
 // Conexión a la base de datos
@@ -14,17 +13,17 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 
 
-// Validar si el formulario fue enviado correctamente
+
 if (isset($_POST["Enviar"])) {
     $answers = $_POST['answers']; // Captura las respuestas enviadas por el formulario
-    $user_name = $_SESSION['usuario'] ?? ''; // Obtiene el nombre del usuario desde la sesión
+    $user_name = $_SESSION['usuario'] ?? ''; // Obtiene el nombre del usuario desde la sesion
 
     
 
     // Inicializar contador de respuestas correctas
     $correct_count = 0;
 
-    // Procesar cada respuesta enviada
+    // Miro a ver las respuestas
     foreach ($answers as $question_id => $answer) {
         // Consulta para obtener la respuesta correcta de la pregunta
         $stmt = $conn->prepare("SELECT respuesPreg FROM preguntas WHERE idPreg = ?");
@@ -38,7 +37,6 @@ if (isset($_POST["Enviar"])) {
             $correct_count++;
         }
 
-        // Cerrar el statement
         $stmt->close();
     }
 
@@ -48,15 +46,11 @@ if (isset($_POST["Enviar"])) {
     $stmt->execute();
     $stmt->close();
 
-    // Cerrar la conexión
+    // Cerrar la conexion
     $conn->close();
 
-    // Redirigir a la página de resultados con el puntaje
-    header("Location: results.php?score=" . $correct_count);
-    exit;
-} else {
-    // Manejar casos donde no se reciben respuestas correctamente
-    echo "<script>alert('No se recibieron respuestas.'); window.location.href='quiz.php';</script>";
+    // Mando a la pagina de resultados con el puntaje
+    header("Location: results.php");
     exit;
 }
 ?>

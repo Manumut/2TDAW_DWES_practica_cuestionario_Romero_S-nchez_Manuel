@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-12-2024 a las 00:05:53
+-- Tiempo de generación: 16-12-2024 a las 05:46:13
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -60,24 +60,19 @@ CREATE TABLE `users` (
   `name` varchar(100) DEFAULT NULL,
   `tiempIni` timestamp NULL DEFAULT NULL,
   `tiempFin` timestamp NULL DEFAULT NULL,
-  `tiempTot` int(3) DEFAULT NULL
+  `score` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `tiempIni`, `tiempFin`, `tiempTot`) VALUES
-(2, 'erty', '2024-12-12 11:41:34', NULL, NULL),
-(3, 'ertyftyj', '2024-12-12 11:41:37', NULL, NULL),
-(4, 'gf', '2024-12-15 21:59:21', NULL, NULL),
-(5, '2', '2024-12-15 21:59:40', NULL, NULL),
-(6, 'e', '2024-12-15 22:10:05', NULL, NULL),
-(7, 'e', '2024-12-15 22:13:09', NULL, NULL),
-(8, 'w', '2024-12-15 22:28:27', NULL, NULL),
-(9, '3', '2024-12-15 22:41:55', NULL, NULL),
-(10, 'r', '2024-12-15 22:45:21', NULL, NULL),
-(11, 'k', '2024-12-15 23:00:47', NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `tiempIni`, `tiempFin`, `score`) VALUES
+(23, 'rt', '2024-12-16 04:18:39', '2024-12-16 04:18:47', 5),
+(24, 'yy', '2024-12-16 04:19:05', '2024-12-16 04:19:17', 4),
+(25, 'rrr', '2024-12-16 04:19:44', '2024-12-16 04:30:53', 5),
+(26, 'f', '2024-12-16 04:40:53', '2024-12-16 04:41:04', 4),
+(27, 'asdf', '2024-12-16 04:43:53', '2024-12-16 04:44:02', 4);
 
 --
 -- Índices para tablas volcadas
@@ -103,7 +98,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

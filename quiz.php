@@ -1,6 +1,6 @@
 <?php
 
-session_start(); // Inicia la sesión
+session_start(); // Inicia la sesion
 
 // Conexión a la base de datos
 $servername = "localhost";
@@ -27,14 +27,15 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="preguntas">
-    <div class="container">
+<body>
+    <div class="preguntas-container">
         <h1>Cuestionario</h1>
         <form action="check_answer.php" method="post">
-    <?php foreach ($questions as $index => $question): ?>
+    <?php foreach ($questions as $index => $question): ?> 
+        <!-- Recorre el array donde estan las preguntas para ponerlas por pantalla -->
         <div class="question">
             <p><strong>Pregunta <?php echo $index + 1; ?>:</strong> <?php echo $question['pregun']; ?></p>
             <input type="text" name="answers[<?php echo $question['idPreg']; ?>]" required>

@@ -2,13 +2,11 @@
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 /* --- Página de Registro --- */
@@ -20,14 +18,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 400px;
+    
 }
-
-.registro-container h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
 .registro-container label {
     display: block;
     font-size: 18px;
@@ -38,7 +30,6 @@ body {
     width: 80%;
     padding: 12px;
     margin-bottom: 20px;
-    border: none;
     border-radius: 5px;
 }
 
@@ -49,8 +40,6 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
 .registro-container input[type="submit"]:hover {
@@ -100,8 +89,6 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
 .preguntas-container input[type="submit"]:hover {
@@ -146,8 +133,7 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s;
+
 }
 
 .resultados-container a.button:hover {
