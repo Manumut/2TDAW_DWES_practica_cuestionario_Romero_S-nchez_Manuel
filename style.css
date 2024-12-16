@@ -10,7 +10,6 @@ body {
 /* --- Página de Registro --- */
 .registro-container {
     background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
     text-align: center;
     padding: 30px;
     border-radius: 15px;
@@ -28,14 +27,12 @@ body {
     width: 80%;
     padding: 12px;
     margin-bottom: 20px;
-    border-radius: 5px;
 }
 
 .registro-container input[type="submit"] {
     background: #ff9800;
-    color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 13px 26px;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -46,19 +43,12 @@ body {
 
 /* --- Página de Preguntas --- */
 .preguntas-container {
-    background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     width: 90%;
-    max-width: 600px;
-    text-align: center;
 }
 
-.preguntas-container h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
 
 .preguntas-container .question {
     margin: 20px 0;
@@ -95,7 +85,6 @@ body {
 
 /* --- Página de Resultados --- */
 .resultados-container {
-    background: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -104,13 +93,9 @@ body {
     text-align: center;
 }
 
-.resultados-container h1 {
-    margin-bottom: 20px;
-}
 
 .resultados-container table {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 20px;
 }
 
